@@ -1,0 +1,56 @@
+Q1.What is css?What are the diffferent types of selectors in css?
+Ans-Cascading Style Sheets fondly referred to as CSS is a simple design language intended to simplify the process of making web pages presentable.
+Types of Selectors:
+1. Grouping Selectors
+2. Customized Selectors
+3. Class Selectors
+4. Tag/Type Selectors
+5. ID Selectors
+Q2.what is CSS box model?
+Ans-The CSS box model is a fundamental concept that defines how the element's dimensions and spacing are calculated.The box model treats every HTML element as a rectangular box consisting of content, padding, border, and margin.
+Q3.Create Admission Form
+Ans-
+<html>
+<head>
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+    <form action="/submit_registration" method="post">
+        <label for="firstname">First Name:</label><br>
+        <input type="text" id="firstname" name="firstname" required><br><br>
+        
+        <label for="middlename">Middle Name:</label><br>
+        <input type="text" id="middlename" name="middlename"><br><br>
+        
+        <label for="lastname">Last Name:</label><br>
+        <input type="text" id="lastname" name="lastname" required><br><br>
+        
+        <label for="course">Course Selection:</label><br>
+        <select id="course" name="course" required>
+            <option value="Computer Science Engineering">Computer Science Engineering</option>
+            <option value="Information Technology">Information Technology</option>
+            <option value="Mobile Communication Engineering">Mobile Communication Engineering</option>
+            <option value="Computer System Computing Engineering">Computer System Computing Engineering</option>
+            <option value="Fashion Tech">Fashion tech</option>
+        </select><br><br>
+        
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other" required>
+        <label for="other">Other</label><br><br>
+        
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
+Q4.Define the list types in html.
+Ans-In html we have three types of lists.
+a)Ordered list-This list is used to give numbering to the lists items.
+b)Unordered list-This list is used to give bullets to the lists items.
+c)Definition list-This list is used to give definitions to definition Terms.
+This all three list is a Paired tag.
