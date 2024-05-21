@@ -1,0 +1,124 @@
+Q1-1. CREATE A TABLE WITH 4 ROWS AND 4 COLUMNS
+  THE COLUMN HEADERS SHOULD BE
+  1.STUDENT NO
+  2.STUDENT NAME
+  3.STUDENT COURSE
+  4.STUDENT FEES
+  
+  THE TABLE SHOULD HAVE A GREY BACKGROUND COLOR,BLACK BORDER AND 2PX CELL SPACING.TEXT SHOULD BE CENTER-ALIGNED. ALSO ADD PADDING 5
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 2px;
+            background-color: grey;
+            border: 1px solid black;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+    <title>Student Table</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>STUDENT NO</th>
+        <th>STUDENT NAME</th>
+        <th>STUDENT COURSE</th>
+        <th>STUDENT FEES</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>RITIK RAJ</td>
+        <td>Mathematics</td>
+        <td>1000(INR)</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>ADITYA</td>
+        <td>Biology</td>
+        <td>1200(INR)</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>SAMARTH MISHRA</td>
+        <td>Chemistry</td>
+        <td>1100(INR)</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>SAUMYADEEP BANIK</td>
+        <td>Physics</td>
+        <td>1150(INR)</td>
+    </tr>
+</table>
+
+</body>
+</html>
+
+Q2- 2.CREATE AN ORDERED LIST CONTAINING GROCERY ITEMS 
+  (USE ROMAN NUMERALS FOR THE LIST-STYLE-TYPE.)
+  
+  CREATE AN UNORDERED LIST CONTAINING GROCERY ITEMS.
+  (USE A CUSTOM SHAPES INSTEAD OF BULLET)
+  
+  CRETE AN DEFINATION LIST FOR THE TERMS JAVA AND ANGULAR.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        ul.custom-bullet {
+            list-style-type: none;
+        }
+        ul.custom-bullet li::before {
+            content: "◆"; /* Custom shape for bullet */
+            color: black;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
+    <title>Grocery Lists and Definition List</title>
+</head>
+<body>
+
+<h2>Ordered List of Grocery Items</h2>
+<ol style="list-style-type: upper-roman;">
+    <li>Apples</li>
+    <li>Bananas</li>
+    <li>Carrots</li>
+    <li>Dates</li>
+    <li>Eggs</li>
+</ol>
+
+<h2>Unordered List of Grocery Items</h2>
+<ul class="custom-bullet">
+    <li>Milk</li>
+    <li>Bread</li>
+    <li>Butter</li>
+    <li>Cheese</li>
+    <li>Yogurt</li>
+</ul>
+
+<h2>Definition List</h2>
+<dl>
+    <dt>Java</dt>
+    <dd>A high-level,class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</dd>
+    <dt>Angular</dt>
+    <dd>A platform for building mobile and desktop web applications using TypeScript/JavaScript and other languages.</dd>
+</dl>
+
+</body>
+</html>
