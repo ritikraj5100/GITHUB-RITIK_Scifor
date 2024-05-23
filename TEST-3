@@ -1,0 +1,87 @@
+Q1.WHAT ARE THE VARIOUS FORMATTING TAGS IN HTML?
+ANS-HTML tags can be categorized into two types based on semantics in HTML.They are: 
+• Semantic Tag 
+• Non-semantic Tag 
+For Semantic Tag
+<header>: Header section
+<footer>: Footer section
+<section>: Document section
+Lists
+<ul>: Unordered list
+<ol>: Ordered list
+<li>: List item
+Structural Formatting
+<p>: Paragraph
+<br>: Line break
+<hr>: Horizontal line
+Q2-How can we Merge two row or columns into Single Row or column?Also Write a code.
+Ans-To merge two or more rows or columns into a single row or column in an HTML table, you use the rowspan and colspan attributes within the <td> or <th> tags.
+Code:
+Merging Rows using rowspan
+<table border="1">
+  <tr>
+    <th>Header 1</th>
+    <th>Header 2</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Rowspan Cell</td>
+    <td>Row 2, Cell 2</td>
+  </tr>
+  <tr>
+    <td>Row 3, Cell 2</td>
+  </tr>
+</table>
+Merging Columns using colspan
+<table border="1">
+  <tr>
+    <th>Header 1</th>
+    <th>Header 2</th>
+  </tr>
+  <tr>
+    <td colspan="2">Colspan Cell</td>
+  </tr>
+  <tr>
+    <td>Row 3, Cell 1</td>
+    <td>Row 3, Cell 2</td>
+  </tr>
+</table>
+Q3.How is cellspacing different from cellpadding?
+Ans-Cellspacing
+Definition: Space between table cells.
+Set on: <table> tag.
+Effect: Creates gaps between cells.
+Cellpadding
+Definition: Space inside a cell, between the cell content and the cell border.
+Set on: <table> tag.
+Effect: Adds padding inside cells.
+Q4.What are semantic Element?
+Ans-Semantic elements in HTML are those that clearly describe their meaning both to the browser and the developer. They provide better accessibility
+search engine optimization (SEO), and code readability by explicitly conveying the role and structure of the content.
+Q5.WAP To insert background image in html webpage.
+Ans-html file code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>This is an example of a webpage with a background image.</p>
+</body>
+</html>
+CSS file code
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+Q6.What is the alt attribute in html?
+Ans-The alt attribute in HTML is used within <img> tags to provide alternative text for an image.This text is displayed if the image cannot be loaded or if the user is using a screen reader
+which is crucial for accessibility.The alt attribute helps improve the usability and accessibility of a website.
+
+
