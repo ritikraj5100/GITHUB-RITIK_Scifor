@@ -1,0 +1,242 @@
+Q1-CREATE A NAVIGATION BAR USING FLEXBOX THAT HAS THE FOLLOWING STRUCTURE
+A.CENTER-ALIGNED NAVIGATION LINKS.(HOME ,ABOUT,ADDRESS, CONTACT)
+B.A SEARCH BAR AND A USER PROFILE ICON ON THE RIGHT.
+C.FOOTER
+NAVIGATION BAR(html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Address</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="nav-right">
+                <input type="text" placeholder="Search">
+                <img src="user-icon.png" alt="User Profile" class="user-icon">
+            </div>
+        </nav>
+    </header>
+    <footer>
+        <p>&copy; 2024 Welcome to my Website</p>
+    </footer>
+</body>
+</html>
+NAVIGATION BAR(CSS)
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-right input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+Q2.CREATE AN HTML TABLE TO DISPLAY A LIST OF PRODUCTS. THE TABLE SHOULD INCLUDE COLUMNS FOR PRODUCT NAME, PRICE,
+AND QUANTITY.ADD A FOOTER ROW TO THE TABLE THAT DISPLAYS THE TOTAL PRICE OF ALL PRODUCTS. (CALCULATE THE TOTALMANUALLY).
+PRODUCT(HTML)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        tfoot {
+            font-weight: bold;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name(REALME 12X 5G)</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mobile</td>
+                <td>₹12999</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Screen Guard</td>
+                <td>₹999</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Mobile Cover</td>
+                <td>₹499</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Total Price</td>
+                <td>₹14497</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
+Q3-3.DESIGN A RESPONSIVE WEBPAGE USING MEDIA QUERIES TO OPTIMIZE THE LAYOUT AND STYLING FOR DIFFERENT SCREEN SIZES.
+YOUR WEBPAGE SHOULD INCLUDE THE FOLLOWING COMPONENTS:HEADER,NAVIGATION MENU,CONTENT SECTION &FOOTER.
+Media(html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Media Queries:Targeting Features and Orientations</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #444;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Media Queries */
+    @media (min-width: 768px) {
+      nav {
+        display: flex;
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Advanced Media Queries:Targeting Features and Orientations</h1>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="content">
+  <h2>Welcome to our Media Queries website!</h2>
+</div>
+
+<footer>
+  <p>&copy; Advanced Media Queries 2024 </p>
+</footer>
+
+</body>
+</html>
+
