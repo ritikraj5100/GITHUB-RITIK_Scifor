@@ -1,0 +1,135 @@
+1.Create an HTML file.Add a form with the following fields:
+Name (text input)
+Email (email input)
+Password (password input)
+Gender (radio buttons for Male and Female)
+Interests (checkboxes for different hobbies or interests)
+A submit button
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h2>Form</h2>
+    <form action="#" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label><br><br>
+
+        <label>Interests:</label><br>
+        <input type="checkbox" id="sports" name="interests" value="sports">
+        <label for="sports">Sports</label><br>
+        <input type="checkbox" id="music" name="interests" value="music">
+        <label for="music">Music</label><br>
+        <input type="checkbox" id="reading" name="interests" value="reading">
+        <label for="reading">Reading</label><br>
+        <input type="checkbox" id="travel" name="interests" value="travel">
+        <label for="travel">Travel</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+2.Add a table to the HTML file with the following columns:
+Name
+Email
+Gender
+Country
+Use foundation classes to style the form and the table
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form and Table</title>
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
+</head>
+<body>
+    <div class="grid-container">
+        <h2>Sample Form</h2>
+        <form action="#" method="post" class="grid-x grid-padding-x">
+            <div class="medium-6 cell">
+                <label for="name">Name:
+                    <input type="text" id="name" name="name" required>
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label for="email">Email:
+                    <input type="email" id="email" name="email" required>
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label for="password">Password:
+                    <input type="password" id="password" name="password" required>
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+            <div class="medium-12 cell">
+                <label>Interests:</label>
+                <input type="checkbox" id="sports" name="interests" value="sports">
+                <label for="sports">Sports</label>
+                <input type="checkbox" id="music" name="interests" value="music">
+                <label for="music">Music</label>
+                <input type="checkbox" id="reading" name="interests" value="reading">
+                <label for="reading">Reading</label>
+                <input type="checkbox" id="travel" name="interests" value="travel">
+                <label for="travel">Travel</label>
+            </div>
+            <div class="medium-12 cell">
+                <input type="submit" class="button" value="Submit">
+            </div>
+        </form>
+
+        <h2>Sample Table</h2>
+        <table class="hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>RITIK RAJ</td>
+                    <td>RAJRITIK559@GMAIL.COM</td>
+                    <td>Male</td>
+                    <td>INDIA</td>
+                </tr>
+                <tr>
+                    <td>ROHAN</td>
+                    <td>ROHAN70@GMAIL.COM</td>
+                    <td>MALE</td>
+                    <td>UAE(UNITED ARAB EMIRATE)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Foundation JS (optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+</body>
+</html>
