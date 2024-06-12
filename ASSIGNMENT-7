@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Declaration</title>
+    <script>
+        // Declaring variables
+        var name = "RITIK RAJ";
+        var age = 20;
+        var isStudent = false;
+
+        // Function to display the variable values in the document
+        function displayValues() {
+            document.getElementById('name').textContent = "Name: " + name;
+            document.getElementById('age').textContent = "Age: " + age;
+            document.getElementById('isStudent').textContent = "Is a student: " + isStudent;
+        }
+
+        // Execute the function to display the values when the page loads
+        window.onload = displayValues;
+    </script>
+</head>
+<body>
+    <h1>STUDENTS DETAILS</h1>
+    <p id="name"></p>
+    <p id="age"></p>
+    <p id="isStudent"></p>
+</body>
+</html>
