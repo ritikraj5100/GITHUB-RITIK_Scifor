@@ -47,8 +47,8 @@
     <h1>Variables Declaration</h1>
     <script>
         // Declare variables with string values
-        var studentName = "I am Bhanu Tejaswini Kaluva";
-        let studentAge = "I am 24 years old";
+        var studentName = "I am RITIK RAJ";
+        let studentAge = "I am 22 years old";
         const studentPosition = "Frontend Intern at Meta Scifor Technologies";
 
         // Display the variables in the console
