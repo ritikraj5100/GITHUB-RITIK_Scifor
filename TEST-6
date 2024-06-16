@@ -1,0 +1,140 @@
+1. Write a javascript program to perform basic arithmetic operations. declare num1 and num2. calculate and print the addition, subtraction, multiplication, division, and remainder of num1 and num2 using +, -,*,/, and % operators. display all results.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Arithmetic Operations</title>
+</head>
+<body>
+    <h1>Arithmetic Operations</h1>
+    <script>
+        let num1 = 20;
+        let num2 = 10;
+
+        // Perform arithmetic operations
+        let addition = num1 + num2;
+        let subtraction = num1 - num2;
+        let multiplication = num1 * num2;
+        let division = num1 / num2;
+        let remainder = num1 % num2;
+
+        // Print the results to the console
+        console.log("Addition: " + num1 + " + " + num2 + " = " + addition);
+        console.log("Subtraction: " + num1 + " - " + num2 + " = " + subtraction);
+        console.log("Multiplication: " + num1 + " * " + num2 + " = " + multiplication);
+        console.log("Division: " + num1 + " / " + num2 + " = " + division);
+        console.log("Remainder: " + num1 + " % " + num2 + " = " + remainder);
+
+        // Display the results on the webpage using document.write
+        document.write("Addition of num1 and num2 is: " + num1 + " + " + num2 + " = " + addition + "<br>");
+        document.write("Subtraction of num1 and num2 is: " + num1 + " - " + num2 + " = " + subtraction + "<br>");
+        document.write("Multiplication of num1 and num2 is: " + num1 + " * " + num2 + " = " + multiplication + "<br>");
+        document.write("Division of num1 and num2 is: " + num1 + " / " + num2 + " = " + division + "<br>");
+        document.write("Remainder of num1 and num2 is: " + num1 + " % " + num2 + " = " + remainder + "<br>");
+    </script>
+</body>
+</html>
+2.Declare var, let, and const variable with string values. write a block demonstrating scope differences between the var and let.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables Declaration</title>
+</head>
+<body>
+    <h1>Variables Declaration</h1>
+    <script>
+        // Declare variables with string values
+        var studentName = "I am Bhanu Tejaswini Kaluva";
+        let studentAge = "I am 24 years old";
+        const studentPosition = "Frontend Intern at Meta Scifor Technologies";
+
+        // Display the variables in the console
+        console.log("studentName:", studentName);
+        console.log("studentAge:", studentAge);
+        console.log("studentPosition:", studentPosition);
+
+        // Display the variables using document.write
+        document.write("<p>studentName: " + studentName + "</p>");
+        document.write("<p>studentAge: " + studentAge + "</p>");
+        document.write("<p>studentPosition: " + studentPosition + "</p>");
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scope Differences: var vs let</title>
+</head>
+<body>
+<!-- Output container -->
+<div id="output-container">
+  <h2>Output:</h2>
+
+  <script>
+    // Declaring variables with string values
+    var varVariable = 'This is a var variable';
+    let letVariable = 'This is a let variable';
+
+    // block demonstrating scope differences
+    {
+        var varVariable = 'Inner var variable'; // This affects the outer varVariable
+        let letVariable = 'Inner let variable'; // This is a different variable than the outer letVariable
+
+        // Output inside the block
+        document.write('<p>Inside block:</p>');
+        document.write('<p>varVariable: ' + varVariable + '</p>'); // Output: Inner var variable
+        document.write('<p>letVariable: ' + letVariable + '</p>'); // Output: Inner let variable
+    }
+
+    // Output outside the block
+    document.write('<p>Outside block:</p>');
+    document.write('<p>varVariable: ' + varVariable + '</p>'); // Output: Inner var variable (affected by the inner block)
+    document.write('<p>letVariable: ' + letVariable + '</p>'); // Output: This is a let variable (unchanged outside the block)
+  </script>
+</div>
+</body>
+</html>
+3.Declare variables of difference data types: string, number, boolean, null, and undefined. also display result with the help of write() or writeln()
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables of Different Data Types</title>
+</head>
+<body>
+  <script>
+    // Declare variables of different data types
+    let strVariable = "Hello, everyone!"; // string
+    let numVariable = 42; // number
+    let boolVariable = true; // boolean
+    let nullVariable = null; // null
+    let undefinedVariable; // undefined
+
+    // Displaying the results using document.write
+    document.write("String variable: " + strVariable + "</br>");
+    document.write("Number variable: " + numVariable + "</br>");
+    document.write("Boolean variable: " + boolVariable + "</br>");
+    document.write("Null variable: " + nullVariable + "</br>");
+    document.write("Undefined variable: " + undefinedVariable + "</br>");
+
+
+    // Adding the space between document.write() and document.writeln()
+    document.write("<br><br>");
+
+    // Displaying the results using document.writeln
+    document.writeln("<p>String variable: " + strVariable + "</p>");
+    document.writeln("<p>Number variable: " + numVariable + "</p>");
+    document.writeln("<p>Boolean variable: " + boolVariable + "</p>");
+    document.writeln("<p>Null variable: " + nullVariable + "</p>");
+    document.writeln("<p>Undefined variable: " + undefinedVariable + "</p>");
+  </script>
+</body>
+</html>
