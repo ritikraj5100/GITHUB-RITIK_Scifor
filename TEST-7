@@ -1,0 +1,130 @@
+1.WRITE A PROGRAM THAT DETERMINES IF A GIVEN NUMBER IS POSITIVE, NEGATIVE, OR ZERO.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Checker</title>
+    <script>
+        function checkNumber() {
+            var number = parseFloat(document.getElementById('numberInput').value);
+            var resultText = '';
+
+            if (isNaN(number)) {
+                resultText = 'Please enter a valid number.';
+            } else if (number > 0) {
+                resultText = 'The number is positive.';
+            } else if (number < 0) {
+                resultText = 'The number is negative.';
+            } else {
+                resultText = 'The number is zero.';
+            }
+
+            document.getElementById('result').innerText = resultText;
+        }
+    </script>
+</head>
+<body>
+    <h1>Number Checker</h1>
+    <p>Enter a number to determine if it is positive, negative, or zero:</p>
+    <input type="text" id="numberInput" placeholder="Enter a number">
+    <button onclick="checkNumber()">Check</button>
+    <p id="result"></p>
+</body>
+</html>
+2.WRITE A PROGRAM USING PROMPT TO INPUT A NUMBER (1-7). USE A SWITCH STATEMENT TO PRINT THE CORRESPONDING DAY OR 'INVALID DAY' FOR NUMBERS OUTSIDE THIS RANGE.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Checker</title>
+    <script>
+        function checkDay() {
+            var number = parseInt(prompt("Enter a number between 1 and 7:"));
+            var resultText = '';
+
+            switch (number) {
+                case 1:
+                    resultText = 'Sunday';
+                    break;
+                case 2:
+                    resultText = 'Monday';
+                    break;
+                case 3:
+                    resultText = 'Tuesday';
+                    break;
+                case 4:
+                    resultText = 'Wednesday';
+                    break;
+                case 5:
+                    resultText = 'Thursday';
+                    break;
+                case 6:
+                    resultText = 'Friday';
+                    break;
+                case 7:
+                    resultText = 'Saturday';
+                    break;
+                default:
+                    resultText = 'Invalid day';
+                    break;
+            }
+
+            document.getElementById('result').innerText = resultText;
+        }
+    </script>
+</head>
+<body>
+    <h1>Day Checker</h1>
+    <button onclick="checkDay()">Enter Number</button>
+    <p id="result"></p>
+</body>
+</html>
+3.WRITE A PROGRAM THAT DETERMINES WHETHER A PERSON IS ELIGIBLE TO VOTE BASED ON THEIR AGE (VOTING AGE IS 18 OR OLDER).USING TERNARY OPERATOR.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Eligibility Checker</title>
+    <script>
+        function checkEligibility() {
+            var age = parseInt(document.getElementById('ageInput').value);
+            var resultText = isNaN(age) ? 'Please enter a valid age.' : (age >= 18 ? 'You are eligible to vote.' : 'You are not eligible to vote.');
+
+            document.getElementById('result').innerText = resultText;
+        }
+    </script>
+</head>
+<body>
+    <h1>Voting Eligibility Checker</h1>
+    <p>Enter your age to check if you are eligible to vote:</p>
+    <input type="text" id="ageInput" placeholder="Enter your age">
+    <button onclick="checkEligibility()">Check Eligibility</button>
+    <p id="result"></p>
+</body>
+</html>
+4.WRITE A PROGRAM TO PRINT NO 1 TO 10 USING FOR LOOP
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Numbers 1 to 10</title>
+    <script>
+        function printNumbers() {
+            var result = '';
+            for (var i = 1; i <= 10; i++) {
+                result += i + '<br>';
+            }
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Print Numbers 1 to 10</h1>
+    <button onclick="printNumbers()">Print Numbers</button>
+    <p id="result"></p>
+</body>
+</html>
