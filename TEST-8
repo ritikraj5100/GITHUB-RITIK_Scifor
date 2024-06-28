@@ -1,0 +1,201 @@
+Q1-<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Operations</title>
+</head>
+<body>
+    <h1>Date Operations</h1>
+    <button onclick="performDateOperations()">Perform Operations</button>
+    <p id="result"></p>
+
+    <script>
+        function performDateOperations() {
+            // a. Get the current month from the date object.
+            let date = new Date();
+            let currentMonth = date.getMonth() + 1; // getMonth() returns 0-11, so add 1
+            console.log("Current Month:", currentMonth);
+
+            // b. Set the month of the date object to the next month.
+            let nextMonth = currentMonth % 12; // if December, wrap around to January
+            date.setMonth(nextMonth);
+
+            // c. Set the date of the date object to the 15th of the current month.
+            date.setDate(15);
+
+            // d. Get the full year of the adjusted date object.
+            let fullYear = date.getFullYear();
+            console.log("Adjusted Date:", date);
+            console.log("Full Year:", fullYear);
+
+            // Display the result in the HTML
+            document.getElementById("result").innerText = 
+                `Adjusted Date: ${date.toDateString()}\nFull Year: ${fullYear}`;
+        }
+    </script>
+</body>
+</html>
+Q2-<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Count</title>
+</head>
+<body>
+    <h1>Character Count</h1>
+    <button onclick="countCharacters()">Count Characters</button>
+    <p id="result"></p>
+
+    <script>
+        function countCharacters() {
+            // Example array of characters
+            const charArray = ['a', 'b', 'a', 'c', 'b', 'a', 'd', 'c'];
+
+            // Function to count characters
+            function countCharArray(array) {
+                const charCount = {};
+
+                array.forEach(char => {
+                    if (charCount[char]) {
+                        charCount[char]++;
+                    } else {
+                        charCount[char] = 1;
+                    }
+                });
+
+                return charCount;
+            }
+
+            const result = countCharArray(charArray);
+
+            // Display the result in the HTML
+            document.getElementById("result").innerText = JSON.stringify(result, null, 2);
+        }
+    </script>
+</body>
+</html>
+Q3-<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse and Sort Array</title>
+</head>
+<body>
+    <h1>Reverse and Sort Array</h1>
+    <button onclick="processArray()">Reverse and Sort Array</button>
+    <p id="result"></p>
+
+    <script>
+        function reverseAndSortArray(array) {
+            // a. Reverse the order of elements in the array.
+            const reversedArray = array.reverse();
+
+            // b. Sort the reversed array in alphabetical order.
+            const sortedArray = reversedArray.sort();
+
+            // c. Return the sorted array.
+            return sortedArray;
+        }
+
+        function processArray() {
+            // Example array of characters
+            const charArray = ['d', 'a', 'c', 'b', 'e'];
+
+            const result = reverseAndSortArray(charArray);
+
+            // Display the result in the HTML
+            document.getElementById("result").innerText = result.join(', ');
+        }
+    </script>
+</body>
+</html>
+Q4-<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Format String</title>
+</head>
+<body>
+    <h1>Format String</h1>
+    <button onclick="formatStringExample()">Format String</button>
+    <p id="result"></p>
+
+    <script>
+        function formatString(str) {
+            // a. Convert the entire string to uppercase.
+            const upperCaseStr = str.toUpperCase();
+
+            // b. Convert the entire string to lowercase.
+            const lowerCaseStr = str.toLowerCase();
+
+            // c. Extract a substring from index 2 to 5 (inclusive).
+            const substring = str.substring(2, 6); // end index is non-inclusive, so use 6
+
+            return {
+                upperCase: upperCaseStr,
+                lowerCase: lowerCaseStr,
+                substring: substring
+            };
+        }
+
+        function formatStringExample() {
+            // Example string
+            const exampleString = "HelloWorld";
+
+            const result = formatString(exampleString);
+
+            // Display the result in the HTML
+            document.getElementById("result").innerHTML = `
+                Uppercase: ${result.upperCase}<br>
+                Lowercase: ${result.lowerCase}<br>
+                Substring (index 2 to 5): ${result.substring}
+            `;
+        }
+    </script>
+</body>
+</html>
+Q5-<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulate Array</title>
+</head>
+<body>
+    <h1>Manipulate Array</h1>
+    <button onclick="manipulateArrayExample()">Manipulate Array</button>
+    <p id="result"></p>
+
+    <script>
+        function manipulateArray(arr) {
+            // a. Add a new string "VOLVO" to the end of the array.
+            arr.push("VOLVO");
+
+            // b. Remove the last element from the array.
+            arr.pop();
+
+            // c. Iterate over each element in the array and convert each element to uppercase.
+            const upperCaseArray = arr.map(element => element.toUpperCase());
+
+            // d. Join all elements of the array into a single string separated by commas.
+            const joinedString = upperCaseArray.join(',');
+
+            return joinedString;
+        }
+
+        function manipulateArrayExample() {
+            // Example array of strings
+            const stringArray = ["apple", "banana", "cherry"];
+
+            const result = manipulateArray(stringArray);
+
+            // Display the result in the HTML
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+</body>
+</html>
