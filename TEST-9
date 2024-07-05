@@ -1,0 +1,119 @@
+Q1.CREATE AN HTML FILE.WRITE A JAVASCRIPT FUNCTION TO MAKE AN AJAX CALL USING XMLHTTPREQUEST.PARSE THE JSON RESPONSE AND DISPLAY THE DATA IN AN HTML DIV FORMAT.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Data</title>
+    <style>
+        #output {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>COVID-19 Data</h1>
+    <button onclick="makeAjaxCall()">Fetch Data</button>
+    <div id="output"></div>
+
+    <script>
+        function makeAjaxCall() {
+            var xhr = new XMLHttpRequest();
+            var url = "https://disease.sh/v3/covid-19/all";
+            
+            xhr.open("GET", url, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var jsonResponse = JSON.parse(xhr.responseText);
+                    displayData(jsonResponse);
+                }
+            };
+            xhr.send();
+        }
+
+        function displayData(data) {
+            var outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = `
+                <div class="item">
+                    <h3>Global COVID-19 Data</h3>
+                    <p>Total Cases: ${data.cases}</p>
+                    <p>Total Deaths: ${data.deaths}</p>
+                    <p>Total Recovered: ${data.recovered}</p>
+                    <p>Active Cases: ${data.active}</p>
+                    <p>Critical Cases: ${data.critical}</p>
+                    <p>Today's Cases: ${data.todayCases}</p>
+                    <p>Today's Deaths: ${data.todayDeaths}</p>
+                    <p>Today's Recovered: ${data.todayRecovered}</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
+Q2.CREATE A NEW HTML FILE.WRITE A JAVASCRIPT FUNCTION TO MAKE A GET REQUEST USING THE FETCH API.PARSE THE JSON RESPONSE AND DISPLAY THE DATA IN AN HTML DIV FORMAT.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Diabetes Data Fetch API</title>
+    <style>
+        #output {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Global Diabetes Data Fetch API</h1>
+    <button onclick="makeFetchCall()">Fetch Data</button>
+    <div id="output"></div>
+
+    <script>
+        function makeFetchCall() {
+            var url = "https://api.worldbank.org/v2/country/all/indicator/SH.STA.DIAB.ZS?format=json";
+
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    displayData(data[1]); // The data is in the second element of the response array
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+        }
+
+        function displayData(data) {
+            var outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = "";
+
+            data.forEach(item => {
+                if (item.value !== null) {
+                    var itemDiv = document.createElement("div");
+                    itemDiv.classList.add("item");
+                    itemDiv.innerHTML = `
+                        <h3>Country: ${item.country.value}</h3>
+                        <p>Year: ${item.date}</p>
+                        <p>Diabetes Prevalence (% of population ages 20 to 79): ${item.value}</p>
+                    `;
+                    outputDiv.appendChild(itemDiv);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
