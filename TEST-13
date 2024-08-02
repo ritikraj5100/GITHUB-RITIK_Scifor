@@ -1,0 +1,51 @@
+1. What is a RESTful API?
+A RESTful API (Representational State Transfer) is a type of web service that uses HTTP methods to perform CRUD (Create, Read, Update, Delete) operations on resources. RESTful APIs follow these principles:
+Stateless: Each request from a client to the server must contain all the information needed to understand and process the request.
+Client-Server Architecture: The client and server are independent; the client requests resources, and the server provides them.
+Cacheable: Responses must define themselves as cacheable or non-cacheable to prevent clients from reusing stale or inappropriate data.
+Layered System: The client cannot ordinarily tell whether it is connected directly to the end server or an intermediary along the way.
+Uniform Interface: Resources are identified in requests (usually as URLs), and actions are performed via standard HTTP methods (GET, POST, PUT, DELETE).
+
+2. <!DOCTYPE html>
+<html>
+<head>
+    <title>Division of Two Integers</title>
+</head>
+<body>
+    <h1>Divide Two Integers</h1>
+    <form id="divisionForm">
+        <label for="num1">Enter first integer:</label>
+        <input type="number" id="num1" required>
+        <br><br>
+        <label for="num2">Enter second integer:</label>
+        <input type="number" id="num2" required>
+        <br><br>
+        <button type="button" onclick="performDivision()">Divide</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function performDivision() {
+            const num1 = document.getElementById('num1').value;
+            const num2 = document.getElementById('num2').value;
+            const resultElement = document.getElementById('result');
+
+            resultElement.innerHTML = '';
+
+            try {
+                const int1 = parseInt(num1);
+                const int2 = parseInt(num2);
+
+                if (int2 === 0) {
+                    throw new Error('Division by zero is not allowed.');
+                }
+
+                const result = int1 / int2;
+                resultElement.innerHTML = `Result: ${result}`;
+            } catch (error) {
+                resultElement.innerHTML = `Error: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>
