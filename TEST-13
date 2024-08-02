@@ -6,7 +6,8 @@ Cacheable: Responses must define themselves as cacheable or non-cacheable to pre
 Layered System: The client cannot ordinarily tell whether it is connected directly to the end server or an intermediary along the way.
 Uniform Interface: Resources are identified in requests (usually as URLs), and actions are performed via standard HTTP methods (GET, POST, PUT, DELETE).
 
-2. <!DOCTYPE html>
+2.WRITE A PROGRAM THAT PROMPTS THE USER TO ENTER TWO INTEGERS AND THEN DIVIDES THE FIRST INTEGER BY THE SECOND. USE A TRY-CATCH BLOCK TO HANDLE ANY POTENTIAL DIVISION BY ZERO ERRORS.
+<!DOCTYPE html>
 <html>
 <head>
     <title>Division of Two Integers</title>
